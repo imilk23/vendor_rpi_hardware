@@ -1,0 +1,36 @@
+// FIXME: your file license if you have one
+
+cc_library_shared {
+    name: "vendor.hardware.hellocb@1.0-impl",
+
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "impl.cpp",
+        "Hello.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "vendor.hardware.hellocb@1.0",
+    ],
+}
+
+cc_binary {
+    name: "vendor.hardware.hellocb@1.0-service",
+    defaults: ["hidl_defaults"],
+    vendor: true,
+    relative_install_path: "hw",
+    srcs: [
+        "service.cpp",
+    ],
+    init_rc: ["vendor.hardware.hellocb@1.0-service.rc"],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "liblog",
+        "vendor.hardware.hellocb@1.0",
+    ],
+}

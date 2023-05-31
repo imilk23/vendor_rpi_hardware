@@ -1,0 +1,8 @@
+package vendor.hardware.hellocb@1.0;
+import IHelloCallback;
+
+interface IHello {
+    init();
+    release();
+    setCallback(IHelloCallback cb);
+};

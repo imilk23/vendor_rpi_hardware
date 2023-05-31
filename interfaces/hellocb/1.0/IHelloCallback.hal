@@ -1,0 +1,5 @@
+package vendor.hardware.hellocb@1.0;
+
+interface IHelloCallback {
+    oneway onNotify(int32_t event);
+};

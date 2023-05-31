@@ -1,0 +1,6 @@
+service hellocb_hal_service /vendor/bin/hw/vendor.hardware.hellocb@1.0-service
+    class hal
+    user root
+    group root
+    seclabel u:r:su:s0
+    

@@ -1,0 +1,12 @@
+hidl_interface {
+    name: "vendor.hardware.hellocb@1.0",
+    root: "vendor.hardware",
+    srcs: [
+        "IHello.hal",
+        "IHelloCallback.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    gen_java: false,
+}
